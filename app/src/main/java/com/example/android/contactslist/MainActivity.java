@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         String selection = ContactsContract.Contacts.IN_VISIBLE_GROUP;
         String order =ContactsContract.Contacts.DISPLAY_NAME
                 + " COLLATE LOCALIZED ASC";
-        return managedQuery(uri,projection,selection,null,order);
+        return managedQuery(uri,projection,selection,null,order);//deprecated after 3.0. Use loader framework to acess content provider
+
     }
 }
